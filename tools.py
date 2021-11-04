@@ -27,12 +27,12 @@ class TimePrint(object):
     @classmethod
     def p(cls, text):
         t = time()
-        print text,
+        print(text)
         if cls.t_last!=None:
-            print " (took ", t-cls.t_last, "s)"
+            print(" (took ", t-cls.t_last, "s)")
         cls.t_last = t
         sys.stdout.flush()
 
 
 if __name__=="__main__":
-    print "this is just a library."
+    print("this is just a library.")

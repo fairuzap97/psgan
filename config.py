@@ -69,7 +69,7 @@ class Config(object):
     def print_info(self):
         ##
         # output some information
-        print "Learning and generating samples from zx ", self.zx, ", which yields images of size npx ", zx_to_npx(self.zx, self.gen_ls) 
-        print "Producing samples from zx_sample ", self.zx_sample, ", which yields images of size npx ", zx_to_npx(self.zx_sample, self.gen_ls) 
-        print "Saving samples and model data to file ",self.save_name
+        print("Learning and generating samples from zx ", self.zx, ", which yields images of size npx ", zx_to_npx(self.zx, self.gen_ls))
+        print("Producing samples from zx_sample ", self.zx_sample, ", which yields images of size npx ", zx_to_npx(self.zx_sample, self.gen_ls))
+        print("Saving samples and model data to file ",self.save_name)
 

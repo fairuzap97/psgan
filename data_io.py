@@ -45,7 +45,7 @@ def get_texture_iter(folder, npx=128, batch_size=64, \
                 img = img.transpose(FLIP_LEFT_RIGHT)
                 imTex += [image_to_tensor(img)]
         except:
-            print "Image ", name, " failed to load!"
+            print("Image ", name, " failed to load!")
 
     while True:
         data=np.zeros((batch_size,3,npx,npx))                   # NOTE: assumes 3 channels!
@@ -73,4 +73,4 @@ def save_tensor(tensor, filename):
 
 
 if __name__=="__main__":
-    print "nothing here."
+    print("nothing here.")

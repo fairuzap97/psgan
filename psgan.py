@@ -120,12 +120,12 @@ class PSGAN(object):
         '''
         
         if name is not None:
-            print "loading parameters from file:",name
+            print("loading parameters from file:",name)
 
             vals =joblib.load(name)
             self.config = vals["config"]
 
-            print "global dimensions of loaded config file",self.config.nz_global 
+            print("global dimensions of loaded config file",self.config.nz_global)
             
             self.dis_W = [sharedX(p) for p in vals["dis_W"]]
             self.dis_g = [sharedX(p) for p in vals["dis_g"]]
@@ -175,7 +175,7 @@ class PSGAN(object):
 
 
     def save(self,name):
-        print "saving PSGAN parameters in file: ", name
+        print("saving PSGAN parameters in file: ", name)
         vals = {}
         vals["config"] = self.config
         vals["dis_W"] = [p.get_value() for p in self.dis_W]
@@ -387,7 +387,7 @@ if __name__=="__main__":
                 cost = psgan.train_d(samples,Znp)
                 Dcost.append(cost)
 
-        print "Gcost=", np.mean(Gcost), "  Dcost=", np.mean(Dcost)
+        print("Gcost=", np.mean(Gcost), "  Dcost=", np.mean(Dcost))
 
         slist = []
         for img in samples:
